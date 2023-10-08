@@ -1,0 +1,29 @@
+.hyperlink {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.hyperlink:hover {
+    color: #888;
+}
+
+.hyperlink::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    right: 0;
+    top: 1.25rem;
+    height: 0.05rem;
+    transition: width 0.3s;
+    background-color: #888;
+}
+
+.hyperlink:hover::before {
+    background-color: #888;
+    width: 100%;
+    left: 0;
+}
+

@@ -1,0 +1,10 @@
+.hamburgerIcon {
+    margin-left: 1rem;
+    cursor: pointer;
+    display: flex;
+}
+
+.hamburgerIcon div {
+    background: #000;
+}
+

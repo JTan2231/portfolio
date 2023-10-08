@@ -1,0 +1,37 @@
+.consoleContainer {
+    display: flex;
+    margin: auto 2rem 2rem 2rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.consoleInputContainer {
+    display: flex;
+    border-bottom: 1px solid black;
+    font-family: mono;
+}
+
+.consoleHistory {
+    font-family: mono;
+}
+
+.input {
+    border: 0;
+    outline: 0;
+    font-family: mono;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.caret {
+    background-color: black;
+    font-family: mono;
+    color: black;
+    user-select: none;
+}
+
+.prompt {
+    top: 0.1rem;
+    font-size: 16px;
+    user-select: none;
+}
