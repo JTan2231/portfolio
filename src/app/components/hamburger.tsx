@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import styles from './hamburger.module.css';
+import common from './common.module.css';
 
 export function Hamburger() {
     const [clicked, setClicked] = useState(false);
@@ -40,9 +41,9 @@ export function Hamburger() {
                 <div style={clicked ? Object.assign({}, baseClass, topBun) : baseClass}></div>
                 <div style={clicked ? Object.assign({}, baseClass, middleBun) : baseClass}></div>
                 <div style={clicked ? Object.assign({}, baseClass, bottomBun) : baseClass}></div>
-                <span style={{ marginLeft: '2rem', fontFamily: 'mono', marginTop: '0.2rem' }}>Notes for Alex</span>
+                <span style={{ marginLeft: '2rem', fontFamily: 'mono', marginTop: '0.2rem' }} className={common.hyperlink}>Notes for Alex</span>
             </div>
-            <div style={{ marginTop: '2rem', transition: 'opacity 0.5s', fontFamily: 'mono', opacity: clicked ? 1 : 0, maxWidth: '700px' }}>
+            <div style={{ marginTop: '2rem', transition: 'opacity 0.5s', fontFamily: 'mono', opacity: clicked ? 1 : 0, maxWidth: '700px', userSelect: clicked ? 'text' : 'none' }}>
                 Looking at this page, I struggle with one question:<ul>
                     <li>Finding the visual and contextual bridge between what I see, work with, and understand, and how I want others to understand my work.</li>
                 </ul>
@@ -53,7 +54,7 @@ export function Hamburger() {
                 </p>
                 <p>
                     The problem is that the nature of this interest and work doesn't leave me with a large repertoire of imagery
-                    that easily relate to what people outside the project might immediately understand. This has left me in a
+                    that easily relates to what people outside the project might immediately understand. This has left me in a
                     weird sort of limbo between too esoteric (e.g. P2P distributed LLM inference engine) and too generic
                     (e.g. I like understanding and manipulating complex ideas into efficient tooling).
                 </p>

@@ -133,6 +133,7 @@ function help() {
     appendToHistory('JT Portfolio, version 1.0.0-10-7-23-release');
     appendToHistory('These shell commands are defined internally. Type `help` to see this list.')
     appendToHistory('Type `help name` to find out more about the function `name`.')
+    appendToHistory('Bold words are clickable links.')
     appendToHistory('');
     appendToHistory(' ls');
     appendToHistory(' cd [project name]');
