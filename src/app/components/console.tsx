@@ -68,7 +68,7 @@ function ls() {
 
     }
 
-    appendElementToHistory(linkDescriptionLine('https://jtan2231.github.io', 'about', getPadding('about') + 'my name is Joey Tan, I\'m a software developer. I like building things.'));
+    appendElementToHistory(linkDescriptionLine('https://jtan2231.github.io', 'about', getPadding('about') + 'my name is Joey Tan, I\'m a software developer. I like programming and math.'));
     appendElementToHistory(linkDescriptionLine('https://github.com/jtan2231/', 'github', getPadding('github') + 'my github profile'));
     appendElementToHistory(linkDescriptionLine('https://github.com/jtan2231/hivemind', 'hivemind', getPadding('hivemind') + 'distributed P2P neural network inference'));
     appendElementToHistory(linkDescriptionLine('https://github.com/jtan2231/eidetic-desktop', 'eidetic', getPadding('eidetic') + 'note-taking with LLM embedding lookup'));
@@ -175,6 +175,7 @@ export function Console() {
             }
 
             const tokens = inputText.split(' ');
+            appendToHistory(tokens, false);
             const command = tokens[0];
 
             const argCheck = (argCount: number, usageMessage: string) => {
@@ -220,6 +221,8 @@ export function Console() {
     useEffect(() => {
         if (document.getElementById('consoleHistory')!.childNodes.length === 0) {
             help();
+            appendToHistory('ls', true);
+            ls();
         }
 
         const handleTyping = (e: any) => {
