@@ -43,8 +43,8 @@ export function Hamburger() {
                 <div style={clicked ? Object.assign({}, baseClass, bottomBun) : baseClass}></div>
                 <span style={{ marginLeft: '2rem', fontFamily: 'mono', marginTop: '0.2rem' }} className={common.hyperlink}>Notes for Alex</span>
             </div>
-            <div style={{ marginTop: '2rem', transition: 'opacity 0.5s', fontFamily: 'mono', opacity: clicked ? 1 : 0, maxWidth: '700px', userSelect: clicked ? 'text' : 'none' }}>
-                Looking at this page, I struggle with one question:<ul>
+            <div style={{ padding: '1rem', border: '1px solid black', marginTop: '2rem', transition: 'opacity 0.5s', fontFamily: 'mono', opacity: clicked ? 1 : 0, maxWidth: '600px', maxHeight: '300px', overflowY: 'auto', userSelect: clicked ? 'text' : 'none' }}>
+                Looking at this page, I'm struggling with one problem:<ul>
                     <li>Finding the visual and contextual bridge between what I see, work with, and understand, and how I want others to understand my work.</li>
                 </ul>
                 <p>
